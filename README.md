@@ -512,3 +512,74 @@ class _QuizCardState extends State<QuizCard> {
     );
   }
 }
+import 'package:flutter/material.dart';
+
+void main() {
+  runApp(MyApp());
+}
+
+class MyApp extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      title: 'Application d\'apprentissage des Mathématiques',
+      theme: ThemeData(
+        primarySwatch: Colors.blue,
+      ),
+      home: HomePage(),
+    );
+  }
+}
+
+class HomePage extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: Text('Opérations Mathématiques'),
+      ),
+      body: Padding(
+        padding: const EdgeInsets.all(20.0),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: <Widget>[
+            // Section 1: Opérations de niveau primaire
+            Text(
+              'Niveau Primaire:',
+              style: TextStyle(fontSize: 22, fontWeight: FontWeight.bold),
+            ),
+            SizedBox(height: 10),
+            Text('1. 3 + 5 = ${3 + 5}'),
+            Text('2. 7 - 2 = ${7 - 2}'),
+            Text('3. 4 * 6 = ${4 * 6}'),
+            Text('4. 9 ÷ 3 = ${9 / 3}'),
+            SizedBox(height: 30),
+
+            // Section 2: Opérations de niveau moyen
+            Text(
+              'Niveau Moyen:',
+              style: TextStyle(fontSize: 22, fontWeight: FontWeight.bold),
+            ),
+            SizedBox(height: 10),
+            Text('1. 12 + 15 = ${12 + 15}'),
+            Text('2. 20 - 7 = ${20 - 7}'),
+            Text('3. 6 * 9 = ${6 * 9}'),
+            Text('4. 56 ÷ 8 = ${56 / 8}'),
+            SizedBox(height: 30),
+
+            // Section 3: Opérations avancées
+            Text(
+              'Niveau Avancé:',
+              style: TextStyle(fontSize: 22, fontWeight: FontWeight.bold),
+            ),
+            SizedBox(height: 10),
+            Text('1. 25 + 37 = ${25 + 37}'),
+            Text('2. 100 - 43 = ${100 - 43}'),
+            Text('3. 12 * 13 = ${12 * 13}'),
+            Text('4. 144 ÷ 12 = ${144 / 12}'),
+          ],
+        ),
+      ),
+    );
+  }
+}
